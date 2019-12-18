@@ -116,14 +116,16 @@ pause
 goto start
 :movefile
 set /p moveingfile=file name: 
+set /p moveoffile=where file you want to move: 
 set /p wheremovefile=where do you want to move: 
-move / -Y %moveingfile%%wheremovefile%
+move /-Y %moveoffile%\%moveingfile% "%wheremovefile%\%moveingfile%"
 pause
 goto start
 :movefolder
 set /p moveeingfolder=folder name: 
+set /p moveoffolder=where folder do you want to move: 
 set /p wheremovefolder=where do you want to move: 
-move / -Y %moveingfolder%%wheremovefolder%
+move /-Y %moveoffolder%\%moveingfolder% "%wheremovefolder%\%moveingfolder%"
 pause
 goto start
 :tree
