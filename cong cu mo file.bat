@@ -161,7 +161,7 @@ goto start
 :copyfolder
 set /p folc=where folder do you want to copy: 
 set /p copyfol=where do you want to save folder: 
-copy "%folc%" "%copyfol%
+copy "%folc%" "%copyfol%"
 pause
 goto start
 :clip
