@@ -57,13 +57,13 @@ goto start
 :hellofolder
 set /p makefolder=folder name: 
 set /p savefolder=where do you want to save?
-md %savefolder%%makefolder%
+md %savefolder%\%makefolder%
 pause
 goto start
 :detfile
 set /p delfile=file name you want to delete: 
 set /p savedelfile=where do you want to delete?
-DEL %savedelfile%%delfile%
+DEL %savedelfile%\%delfile%
 pause
 goto start
 :writ
@@ -75,7 +75,7 @@ goto start
 :detfolder
 set /p delfolder=folder name you want to delete: 
 set /p savedelfolder=where do you want to delete: 
-DEL %savedelfolder%%delfolder%
+DEL %savedelfolder%\%delfolder%
 pause
 goto start
 :dirfile
@@ -88,7 +88,7 @@ goto start
 :dirfolder
 set /p dird=folder name: 
 set /p dirdloca=where do you want to dir folder: 
-DIR %dirdloca%%dird% /O N /P /Q /R /S /T C A W
+DIR %dirdloca%\%dird% /O N /P /Q /R /S /T C A W
 pause
 goto start
 :readfile
@@ -103,7 +103,7 @@ set /p refile=file name:
 set /p refile1=name you want to change: 
 set /p saverenamefile=where file do you want to rename: 
 cd %fileloca%
-rename %refile%%refile1%
+rename %refile%\%refile1%
 pause
 goto start
 :renamefolder
@@ -111,7 +111,7 @@ set /p refolder=folder name:
 set /p refolder1=name you want to change: 
 set /p saverenamefolder=where folder do you want to rename: 
 cd %saverenamefolder%
-rename %refolder%%refolder1%
+rename %refolder%\%refolder1%
 pause
 goto start
 :movefile
@@ -142,14 +142,14 @@ goto start
 :startfile
 set /p startfilename=file name: 
 set /p startfilew=file localtion: 
-start %startfilew%%startfilename%
+start %startfilew%\%startfilename%
 pause
 goto start
 :closeexe
 echo can only be used with programs or .exe
 set /p closeexename=file name: 
 set /p closeexew=where file you want to close: 
-TASKKILL /F /IM %clossexew%%closeexename%.exe
+TASKKILL /F /IM %clossexew%\%closeexename%.exe
 pause
 goto start
 :copyfile
@@ -167,7 +167,7 @@ goto start
 :clip
 set /p clipname=what is your file to copy to clipboard: 
 set /p adrrclip=where file you want to copy to clipboard: 
-CLIP < %adrrclip%%clipname%
+CLIP < %adrrclip%\%clipname%
 pause
 goto start
 :compare
