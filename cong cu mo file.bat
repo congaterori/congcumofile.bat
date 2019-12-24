@@ -51,7 +51,7 @@ if %tl% == 21 goto find
 set /p makefile=file name: 
 set /p savefile=where do you want to save?
 set /p writefile=what do you want to write in file: 
-echo %writefile% > %savefile%%makefile%
+echo %writefile% > %savefile%\%makefile%
 pause
 goto start
 :hellofolder
