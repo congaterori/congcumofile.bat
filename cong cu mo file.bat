@@ -2,7 +2,7 @@
 @echo off
 title cong cu mo file
 color a
-echo The file you work on is on your desktop
+echo you don't need add "\" after add link
 echo If you want to continue writing, choose to write to the file
 echo 1.create a new file
 echo 2.create a new folder
